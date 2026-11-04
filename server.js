@@ -42,7 +42,7 @@ function handleSignup(req, res) {
   req.on("end", () => {
     try {
       const form = new URLSearchParams(body);
-      const name = form.get("name").trim();
+      const name = form.get("attendee").trim();
       const topic = (form.get("topic") || "").trim();
 
       if (name === "" || topic === "") {
